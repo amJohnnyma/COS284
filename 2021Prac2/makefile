@@ -9,6 +9,13 @@ t1:
 t1r:
 	./task1
 
+t2:
+	nasm -f elf64 task2.asm -o task2.o
+	ld task2.o -o task2
+
+t2r:
+	./task2
+
 clean:
 	rm -f hello.o hello
 
