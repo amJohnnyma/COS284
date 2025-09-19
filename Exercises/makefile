@@ -7,6 +7,15 @@ addr:
 addc:
 	rm -f add add.o
 
+calc:
+	nasm -f elf64 calc.asm
+	gcc -no-pie -o calc calc.o
+calcr:
+	./calc
+
+calcc:
+	rm -f calc calc.o
+
 
 mult:
 	nasm -f elf64 mult.asm
